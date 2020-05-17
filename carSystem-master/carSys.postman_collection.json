@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "529ce80c-d1a5-45bf-8da6-047b55f212fc",
+		"name": "carSys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查询所有",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/car/findAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "通过id查询",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/car/findById/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"findById",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "通过车名查询",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/car/findByCarName/%E5%A5%A5%E8%BF%AA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"findByCarName",
+						"%E5%A5%A5%E8%BF%AA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "通过id增加",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/car/insertCar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"insertCar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "通过id删除",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/car/deleteById/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"deleteById",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "汽车销售",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"carName\": \"宝马\",\n\t\"carSeries\": \"X1\",\n\t\"num\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/car/buyCar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"buyCar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "汽车模糊查询",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/car/carPage?carname=\"宝马\"&start=1&end=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"car",
+						"carPage"
+					],
+					"query": [
+						{
+							"key": "carname",
+							"value": "\"宝马\""
+						},
+						{
+							"key": "start",
+							"value": "1"
+						},
+						{
+							"key": "end",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
